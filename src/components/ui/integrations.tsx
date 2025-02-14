@@ -6,8 +6,6 @@ import { JSX, useEffect, useId, useRef, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 
 type Tile = { icon: JSX.Element; bg: JSX.Element };
-const [randomTiles1, setRandomTiles1] = useState<Tile[]>([]);
-
 
 const tiles = [
     {
