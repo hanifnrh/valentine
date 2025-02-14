@@ -5,8 +5,6 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { JSX, useEffect, useId, useRef, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 
-type Tile = { icon: JSX.Element; bg: JSX.Element };
-
 const tiles = [
     {
         icon: <FaHeart />,
