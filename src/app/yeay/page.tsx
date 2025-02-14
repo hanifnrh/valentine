@@ -13,7 +13,7 @@ export default function Page2() {
         <div>
 
           <h1 className="pointer-events-none whitespace-pre-wrap text-pink-600 text-center text-5xl">
-            Yeay! Now you're my VALENTINE!
+            Yeay! Now you&apos;re my VALENTINE!
           </h1>
 
           <Confetti

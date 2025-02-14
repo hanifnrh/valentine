@@ -5,61 +5,63 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { JSX, useEffect, useId, useRef, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 
+type Tile = { icon: JSX.Element; bg: JSX.Element };
+const [randomTiles1, setRandomTiles1] = useState<Tile[]>([]);
+
+
 const tiles = [
     {
-        icon: <FaHeart   />,
+        icon: <FaHeart />,
         bg: (
             <div className="pointer-events-none absolute left-1/2 top-1/2 "></div>
         ),
     },
     {
-        icon: <FaHeart   />,
+        icon: <FaHeart />,
         bg: (
             <div className="pointer-events-none absolute left-1/2 top-1/2 "></div>
         ),
     },
     {
-        icon: <FaHeart   />,
+        icon: <FaHeart />,
         bg: (
             <div className="pointer-events-none absolute left-1/2 top-1/2 size-1/2"></div>
         ),
     },
     {
-        icon: <FaHeart   />,
+        icon: <FaHeart />,
         bg: (
             <div className="pointer-events-none absolute left-1/2 top-1/2 "></div>
         ),
     },
     {
-        icon: <FaHeart   />,
+        icon: <FaHeart />,
         bg: (
             <div className="pointer-events-none absolute left-1/2 top-1/2 "></div>
         ),
     },
     {
-        icon: <FaHeart   />,
+        icon: <FaHeart />,
         bg: (
             <div className="pointer-events-none absolute left-1/2 top-1/2"></div>
         ),
     },
 ];
 
-function shuffleArray(array: any[]) {
+function shuffleArray<T>(array: T[]): T[] {
     let currentIndex = array.length;
     let randomIndex;
-    // While there remain elements to shuffle.
+
     while (currentIndex !== 0) {
-        // Pick a remaining element.
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex],
-            array[currentIndex],
-        ];
+
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
     }
+
     return array;
 }
+
 
 function Card(card: { icon: JSX.Element; bg: JSX.Element }) {
     const id = useId();

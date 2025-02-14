@@ -1,13 +1,10 @@
 "use client";
 
-import { type ConfettiRef } from "@/components/magicui/confetti";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
 
 export default function Enjoy() {
-  const confettiRef = useRef<ConfettiRef>(null);
   return (
     <div>
       <main className="font-medium flex flex-col gap-4 justify-center items-center h-screen bg-pink-600">

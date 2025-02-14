@@ -1,11 +1,8 @@
 "use client";
 
-import { type ConfettiRef } from "@/components/magicui/confetti";
 import Image from "next/image";
-import { useRef } from "react";
 
 export default function End() {
-  const confettiRef = useRef<ConfettiRef>(null);
   return (
     <div>
       <main className="font-medium flex flex-col gap-4 justify-center items-center h-screen bg-pink-600">
